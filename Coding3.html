@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function gymnasticsCompetition(dolphinsScores, koalasScores) {
+        // Tính điểm trung bình
+        const dolphinsAvg = dolphinsScores.reduce((a, b) => a + b, 0) / dolphinsScores.length;
+        const koalasAvg = koalasScores.reduce((a, b) => a + b, 0) / koalasScores.length;
+    
+        // Xác định kết quả
+        if (dolphinsAvg > koalasAvg && dolphinsAvg >= 100) {
+            return "Dolphins chiến thắng!";
+        } else if (koalasAvg > dolphinsAvg && koalasAvg >= 100) {
+            return "Koalas chiến thắng!";
+        } else if (dolphinsAvg === koalasAvg && dolphinsAvg >= 100 && koalasAvg >= 100) {
+            return "Hòa nhau!";
+        } else {
+            return "Không đội nào giành được cúp.";
+        }
+    }
+    
+    // Dữ liệu 1
+    console.log("Dữ liệu 1:");
+    console.log(gymnasticsCompetition([96, 108, 89], [88, 91, 110]));
+    
+    // Dữ liệu Bonus 1
+    console.log("\nDữ liệu Bonus 1:");
+    console.log(gymnasticsCompetition([97, 112, 101], [109, 95, 123]));
+    
+    // Dữ liệu Bonus 2
+    console.log("\nDữ liệu Bonus 2:");
+    console.log(gymnasticsCompetition([97, 112, 101], [109, 95, 106]));
+    </script>
+</body>
+</html>

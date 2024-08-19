@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+    <script>
+     function compareBMI(markMass, markHeight, johnMass, johnHeight) {
+    // Calculate BMI
+    const markBMI = markMass / (markHeight ** 2);
+    const johnBMI = johnMass / (johnHeight ** 2);
+    
+    // Print the BMI values
+    console.log(`Mark's BMI: ${markBMI.toFixed(2)}`);
+    console.log(`John's BMI: ${johnBMI.toFixed(2)}`);
+    
+  
+}
+console.log("Kết quả so sánh chỉ số BMI của Mark và John")
+// Test Data 1
+console.log("Test Data 1:");
+compareBMI(78, 1.69, 92, 1.95);
+
+// Bonus Data 1
+console.log("\nBonus Data 1:");
+compareBMI(95, 1.88, 85, 1.76);
+
+// Bonus Data 2
+console.log("\nBonus Data 2:");
+compareBMI(97, 1.88, 85, 1.76);
+    </script>
+    
+</body>
+</html>
