@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // Hàm mũi tên để tính điểm trung bình của 3 điểm số
+        const tinhTrungBinh = (diem1, diem2, diem3) => (diem1 + diem2 + diem3) / 3;
+
+        // Hàm kiểm tra đội thắng dựa trên điểm trung bình
+        const kiemTraNguoiThang = (trungBinhDolphins, trungBinhKoalas) => {
+            if (trungBinhDolphins >= 2 * trungBinhKoalas) {
+                console.log(`Dolphins thắng (${trungBinhDolphins.toFixed(2)} vs. ${trungBinhKoalas.toFixed(2)})`);
+            } else if (trungBinhKoalas >= 2 * trungBinhDolphins) {
+                console.log(`Koalas thắng (${trungBinhKoalas.toFixed(2)} vs. ${trungBinhDolphins.toFixed(2)})`);
+            } else {
+                console.log("Không đội nào thắng");
+            }
+        };
+
+        // Dữ liệu thử nghiệm 1
+        console.log("Dữ liệu thử nghiệm 1:");
+        const trungBinhDolphins1 = tinhTrungBinh(44, 23, 71);
+        const trungBinhKoalas1 = tinhTrungBinh(65, 54, 49);
+        kiemTraNguoiThang(trungBinhDolphins1, trungBinhKoalas1);
+
+        // Dữ liệu thử nghiệm 2
+        console.log("\nDữ liệu thử nghiệm 2:");
+        const trungBinhDolphins2 = tinhTrungBinh(85, 54, 41);
+        const trungBinhKoalas2 = tinhTrungBinh(23, 34, 27);
+        kiemTraNguoiThang(trungBinhDolphins2, trungBinhKoalas2);
+
+    </script>
+</body>
+
+</html>
