@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+     
+        
+        const Mark ={
+            mass :78,
+            height :1.69,
+
+
+            calcBMI :function(){
+                return this.bmi =this.mass/ (this.height ** 2);
+
+            }
+            
+        }    
+        const join ={
+            mass :92,
+            height :1.95,
+
+
+            calcBMI :function(){
+                return this.bmi =this.mass/ (this.height ** 2);
+
+            }
+            
+        }    
+       Mark.calcBMI();
+       join.calcBMI();
+
+       if(Mark.bmi > join.bmi) {
+        console.log("Mark BMI  is higher Join");
+        
+       }
+       else if(Mark.bmi < join.bmi){
+        console.log("Join BMI  is higher Mark ");
+       }
+       else{
+        console.log("Bang");
+        
+       }
+        </script>
+</body>
+</html>
